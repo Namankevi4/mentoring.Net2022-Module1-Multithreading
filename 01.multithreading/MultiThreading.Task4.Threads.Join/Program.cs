@@ -10,6 +10,7 @@
  */
 
 using System;
+using System.Threading;
 
 namespace MultiThreading.Task4.Threads.Join
 {
@@ -26,7 +27,11 @@ namespace MultiThreading.Task4.Threads.Join
 
             Console.WriteLine();
 
-            // feel free to add your code
+            int countOfThreads = 100;
+
+            new MakingThreadWithoutThreadPool().Entry(countOfThreads);
+
+            //new MakingThreadWithThreadPool().Entry(countOfThreads);
 
             Console.ReadLine();
         }
